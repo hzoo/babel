@@ -43,7 +43,7 @@ const hoistVariablesVisitor = {
  *  - Remove the current node.
  */
 
-export function replaceWithMultiple(nodes: Array<Object>) {
+export function replaceWithMultiple(nodes: Array<Object>, name) {
   this.resync();
 
   nodes = this._verifyNodeList(nodes);
@@ -51,6 +51,16 @@ export function replaceWithMultiple(nodes: Array<Object>) {
   t.inheritTrailingComments(nodes[nodes.length - 1], this.node);
   this.node = this.container[this.key] = null;
   const paths = this.insertAfter(nodes);
+
+  nodes.forEach(node => {
+    if (name) {
+      if (!node.babelPlugin) {
+        node.babelPlugin = [name];
+      } else {
+        node.babelPlugin.push(name);
+      }
+    }
+  });
 
   if (this.node) {
     this.requeue();
@@ -99,7 +109,7 @@ export function replaceWithSourceString(replacement) {
  * Replace the current node with another.
  */
 
-export function replaceWith(replacement) {
+export function replaceWith(replacement, name) {
   this.resync();
 
   if (this.removed) {
@@ -166,6 +176,14 @@ export function replaceWith(replacement) {
   if (oldNode) {
     t.inheritsComments(replacement, oldNode);
     t.removeComments(oldNode);
+  }
+
+  if (name) {
+    if (!replacement.babelPlugin) {
+      replacement.babelPlugin = [name];
+    } else {
+      replacement.babelPlugin.push(name);
+    }
   }
 
   // replace the node

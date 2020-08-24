@@ -73,3 +73,6 @@ packages/babel-standalone/babel.min.js
 /eslint/*/LICENSE
 !/packages/babel-eslint-plugin/LICENSE
 /.vscode
+
+sandbox/build/
+sandbox/node_modules/
