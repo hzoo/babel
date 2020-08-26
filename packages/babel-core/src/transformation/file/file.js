@@ -163,7 +163,7 @@ export default class File {
     );
   }
 
-  addHelper(name: string): Object {
+  addHelper(name: string, metadata): Object {
     const declar = this.declarations[name];
     if (declar) return t.cloneNode(declar);
 
@@ -200,6 +200,7 @@ export default class File {
 
     nodes.forEach(node => {
       node._compact = true;
+      this.path.addMetadata(node, metadata);
     });
 
     this.path.unshiftContainer("body", nodes);
