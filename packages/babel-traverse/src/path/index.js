@@ -223,6 +223,26 @@ Object.assign(
   NodePath_comments,
 );
 
+NodePath.prototype.addMetadata = function (node, metaData) {
+  if (!metaData) return;
+  const { name, file, start, end } = metaData;
+  const newNode = {
+    name,
+    file,
+    start:
+      node.start ||
+      this.node.start ||
+      this.node?.babelPlugin?.[0].start ||
+      start,
+    end: node.end || this.node.end || this.node?.babelPlugin?.[0].end || end,
+  };
+  if (!this?.node.babelPlugin) {
+    node.babelPlugin = [newNode];
+  } else {
+    node.babelPlugin = this.node.babelPlugin.concat(newNode);
+  }
+};
+
 for (const type of (t.TYPES: Array<string>)) {
   const typeKey = `is${type}`;
   const fn = t[typeKey];

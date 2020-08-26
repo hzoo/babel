@@ -9,19 +9,13 @@ import * as t from "@babel/types";
  * Insert the provided nodes before the current one.
  */
 
-export function insertBefore(nodes, name) {
+export function insertBefore(nodes, metadata) {
   this._assertUnremoved();
 
   nodes = this._verifyNodeList(nodes);
 
   nodes.forEach(node => {
-    if (name) {
-      if (!node.babelPlugin) {
-        node.babelPlugin = [name];
-      } else {
-        node.babelPlugin.push(name);
-      }
-    }
+    this.addMetadata(node, metadata);
   });
 
   const { parentPath } = this;
@@ -101,19 +95,13 @@ export function _containerInsertAfter(nodes) {
  * expression, ensure that the completion record is correct by pushing the current node.
  */
 
-export function insertAfter(nodes, name) {
+export function insertAfter(nodes, metadata) {
   this._assertUnremoved();
 
   nodes = this._verifyNodeList(nodes);
 
   nodes.forEach(node => {
-    if (name) {
-      if (!node.babelPlugin) {
-        node.babelPlugin = [name];
-      } else {
-        node.babelPlugin.push(name);
-      }
-    }
+    this.addMetadata(node, metadata);
   });
 
   const { parentPath } = this;
