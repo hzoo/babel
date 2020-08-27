@@ -74,6 +74,7 @@
     "typescript": "~4.1.3"
   },
   "workspaces": [
+    "sandbox",
     "codemods/*",
     "eslint/*",
     "packages/*",
