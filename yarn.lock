@@ -271,7 +271,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@workspace:*, @babel/core@workspace:^7.0.0, @babel/core@workspace:^7.12.13, @babel/core@workspace:^7.13.8, @babel/core@workspace:packages/babel-core":
+"@babel/core@workspace:*, @babel/core@workspace:^7.12.13, @babel/core@workspace:^7.13.8, @babel/core@workspace:packages/babel-core":
   version: 0.0.0-use.local
   resolution: "@babel/core@workspace:packages/babel-core"
   dependencies:
@@ -3186,7 +3186,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-runtime@workspace:*, @babel/plugin-transform-runtime@workspace:^7.0.0, @babel/plugin-transform-runtime@workspace:packages/babel-plugin-transform-runtime":
+"@babel/plugin-transform-runtime@workspace:*, @babel/plugin-transform-runtime@workspace:packages/babel-plugin-transform-runtime":
   version: 0.0.0-use.local
   resolution: "@babel/plugin-transform-runtime@workspace:packages/babel-plugin-transform-runtime"
   dependencies:
@@ -3650,7 +3650,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@workspace:*, @babel/preset-env@workspace:^7.0.0, @babel/preset-env@workspace:^7.12.13, @babel/preset-env@workspace:packages/babel-preset-env":
+"@babel/preset-env@workspace:*, @babel/preset-env@workspace:^7.12.13, @babel/preset-env@workspace:packages/babel-preset-env":
   version: 0.0.0-use.local
   resolution: "@babel/preset-env@workspace:packages/babel-preset-env"
   dependencies:
@@ -3802,7 +3802,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-react@workspace:*, @babel/preset-react@workspace:^7.0.0, @babel/preset-react@workspace:^7.12.13, @babel/preset-react@workspace:packages/babel-preset-react":
+"@babel/preset-react@workspace:*, @babel/preset-react@workspace:^7.12.13, @babel/preset-react@workspace:packages/babel-preset-react":
   version: 0.0.0-use.local
   resolution: "@babel/preset-react@workspace:packages/babel-preset-react"
   dependencies:
@@ -3843,7 +3843,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@workspace:*, @babel/preset-typescript@workspace:^7.0.0, @babel/preset-typescript@workspace:packages/babel-preset-typescript":
+"@babel/preset-typescript@workspace:*, @babel/preset-typescript@workspace:packages/babel-preset-typescript":
   version: 0.0.0-use.local
   resolution: "@babel/preset-typescript@workspace:packages/babel-preset-typescript"
   dependencies:
@@ -7012,11 +7012,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "babel-output-highlighting@workspace:sandbox"
   dependencies:
-    "@babel/core": "workspace:^7.0.0"
-    "@babel/plugin-transform-runtime": "workspace:^7.0.0"
-    "@babel/preset-env": "workspace:^7.0.0"
-    "@babel/preset-react": "workspace:^7.0.0"
-    "@babel/preset-typescript": "workspace:^7.0.0"
+    "@babel/core": "workspace:*"
+    "@babel/plugin-transform-runtime": "workspace:*"
+    "@babel/preset-env": "workspace:*"
+    "@babel/preset-react": "workspace:*"
+    "@babel/preset-typescript": "workspace:*"
     codemirror: ^5.54.0
     prettier: ~2.0.5
     react: ^16.11.0

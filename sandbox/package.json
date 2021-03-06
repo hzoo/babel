@@ -4,11 +4,11 @@
   "private": true,
   "description": "",
   "dependencies": {
-    "@babel/core": "workspace:^7.0.0",
-    "@babel/plugin-transform-runtime": "workspace:^7.0.0",
-    "@babel/preset-env": "workspace:^7.0.0",
-    "@babel/preset-react": "workspace:^7.0.0",
-    "@babel/preset-typescript": "workspace:^7.0.0",
+    "@babel/core": "workspace:*",
+    "@babel/plugin-transform-runtime": "workspace:*",
+    "@babel/preset-env": "workspace:*",
+    "@babel/preset-react": "workspace:*",
+    "@babel/preset-typescript": "workspace:*",
     "codemirror": "^5.54.0",
     "react": "^16.11.0",
     "react-codemirror2": "^7.2.0",
@@ -29,7 +29,6 @@
       "edge 16"
     ],
     "development": [
-      "last 1 chrome version",
       "last 1 firefox version"
     ]
   }
