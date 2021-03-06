@@ -7018,6 +7018,7 @@ __metadata:
     "@babel/preset-react": "workspace:*"
     "@babel/preset-typescript": "workspace:*"
     codemirror: ^5.54.0
+    diff-match-patch: 1.0.5
     prettier: ~2.0.5
     react: ^16.11.0
     react-codemirror2: ^7.2.0
@@ -9566,6 +9567,13 @@ __metadata:
   bin:
     detective: bin/detective.js
   checksum: 3dd4582ab18a66f093fd8a74509336012ae483546df92b69e91722abc72842174717a352668852150e103ca197653658f8595e8f5ab8a3eeb2a918ae8bd4ae92
+  languageName: node
+  linkType: hard
+
+"diff-match-patch@npm:1.0.5":
+  version: 1.0.5
+  resolution: "diff-match-patch@npm:1.0.5"
+  checksum: 4694f40dbfd725e6ceaaa94c4779b60ceaf2d3b382229118310154d469f983d665ecfddae3c5c402bc5bb51930db63a1d27bd30c5d91e38de13f9d8054f2f4ae
   languageName: node
   linkType: hard
 

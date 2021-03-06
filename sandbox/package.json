@@ -10,6 +10,7 @@
     "@babel/preset-react": "workspace:*",
     "@babel/preset-typescript": "workspace:*",
     "codemirror": "^5.54.0",
+    "diff-match-patch": "1.0.5",
     "react": "^16.11.0",
     "react-codemirror2": "^7.2.0",
     "react-dom": "^16.11.0",
