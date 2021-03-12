@@ -342,6 +342,12 @@ You can set \`throwIfNamespace: false\` to bypass this warning.`,
     }
 
     function accumulateAttribute(array, node) {
+      if (!node._originalLoc) {
+        node._originalLoc = {
+          ...t.cloneNode(node, true),
+        };
+      }
+
       if (t.isJSXSpreadAttribute(node)) {
         const arg = node.argument;
         // Collect properties into props array if spreading object expression
@@ -532,10 +538,9 @@ You can set \`throwIfNamespace: false\` to bypass this warning.`,
 
       if (t.react.isCompatTag(tagName)) {
         let temp = t.stringLiteral(tagName);
-        temp.originalLoc = {
+        temp._originalLoc = {
+          ...t.cloneNode(openingPath.node.name, true),
           type: "JSXIdentifier",
-          start: openingPath.node.name.start,
-          end: openingPath.node.name.end,
         };
         return temp;
       } else {
